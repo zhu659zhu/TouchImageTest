@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/ll_title"
+        android:layout_width="@dimen/all_title_height"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical" 
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/iv_title_flash_led"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_launcher" 
+                android:padding="10dip"/>
+            
+            <ImageView
+                android:id="@+id/iv_title_change_camera"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_launcher" 
+                android:padding="10dip"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/iv_camera_take_photo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher" />
+    </LinearLayout>
+
+    <com.example.touchimagetest.Preview
+        android:id="@+id/sfv_camera"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_toLeftOf="@id/ll_bottom"
+        android:layout_toRightOf="@id/ll_title"
+        android:gravity="center" >
+    </com.example.touchimagetest.Preview>
+</RelativeLayout>
